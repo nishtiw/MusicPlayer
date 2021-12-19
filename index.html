@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body>
+    <div class="main_div">
+        <div class="music_container">
+            <h2 id="title">Higher</h2>
+            <h3 id="artist">Joe Layne</h3>
+            <div class="img_container">
+                <img src="images/song-1.jpg" alt="">
+            </div>
+            <audio src="music/song-1.mp3"></audio> 
+            <!-- the above audio tag will be visible on the website only when we use "controls" attribute. Since we don't want to make this part visible using html on the screen we will not use "controls". We will add controls using Javascript. 
+            E.g.: <audio src="music/song-1.mp3" controls></audio>  -->
 
+
+            <!-- progress bar -->
+            <div class="progressbar_container" id="progress_container">
+                <div class="progress_duration_meter">
+                    <div id="current_time">0:00</div>
+                    <div id="duration">2:55</div>
+                </div>
+                <div class="progress_div" id="progress_div">
+                    <div class="progress" id="progress"></div>
+                </div>
+            </div>
+
+            <!-- controls  -->
+            <div class="music_controls">
+                <i class="fa fa-solid fa-backward" id="prev" title="Previous"></i>
+                <i class="fa fa-solid fa-play play_button" id="play" title="Play"></i>
+                <i class="fa fa-solid fa-forward" id="next" title="Next"></i>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+    
+</body>
+</html>
